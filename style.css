@@ -1,172 +1,100 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-html{
-    width: 100%;   height:  100%; overflow: hidden;
-}
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;    height: 100%;
-}
-div#global{
+
+html, body {
     width: 100%;
     height: 100%;
-    background-color: blanchedalmond;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-aside{
-    width: 20vw;
+
+#global {
+    width: 100%;
     height: 100%;
-    background-color: #556574;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-section{
-    width: 100vw;
-    height: 100%;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
+
+header {
+    background-color: #0c6dfc;
+    color: #fff;
+    padding: 10px 20px;
 }
-div.logotipo{
+
+.logotipo {
     width: 100%;
     height: 50px;
-    background-image: url(./image/Logotipo.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: 45%;
-    margin-top: 10px;
+    background: url('./image/Logotipo.png') no-repeat center;
+    background-size: contain;
+    background-size: 130px;
 }
-nav{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 40px;
-    color: #FFF;
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #0c6dfc;
-    text-align: center;
 }
-header{
-    width: 100%;
-    font-size: 20pt;
-    font-weight: bold;
-    padding-left: 20px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    column-gap: 10px;
-    row-gap: 10px;
-    color: #556574;
-    flex-direction: column;
+
+nav ul li {
+    margin: 0 10px;
 }
-header p{
-    font-size: 10pt;
-    font-weight: normal;
-}
-header p a{
-    color: #0c6dfc;
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
 }
-form{
-    width: 98%;
-    height: 100%;
-    /*border: solid 0.5px rgb(182, 62, 82);*/
-    margin-top: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;
-}
-div.topo_formulario{
-    width: 100%;
-    /*background-color: #556574;*/
-    color: #0c6dfc;
-    height: 40px;
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    box-sizing: border-box;
-    column-gap: 10px;
-}
-table{
-    width: 98%;
-    height: 10%;
 
+section {
+    padding: 20px;
 }
-th{
-    font-weight: normal;
-    text-align: left;
-    /*background-color: #0c6dfc;*/
-    border: solid 10px transparent;
-    height: 5px;
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-td{
-    font-weight: normal;
-    height: 30px;
-    text-align: left;
-    border: solid 10px transparent;
+
+.form-group {
+    margin-bottom: 20px;
 }
-input[type="text"]{
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
     width: 100%;
-    height: 30px;
-    border: solid 0.5px #979797;
-    border-radius: 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     outline: none;
+    font-size: 16px;
+    color: #333;
 }
-::placeholder{
-    
-}
-textarea{
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    border: solid 0.5px #979797;
-    border-radius: 5px;
+
+textarea {
     resize: none;
-    outline: none;
 }
-input[type="number"]{
+
+input[type="submit"] {
     width: 100%;
-    height: 30px;
-    border: solid 0.5px #979797;
-    border-radius: 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    outline: none;
-}
-input[type="date"]{
-    width: 100%;
-    height: 30px;
-    border: solid 0.5px #979797;
-    border-radius: 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    outline: none;
-}
-input[type="submit"]{
-    width: 100%;
-    height: 30px;
-    border: 0px;
-    border-radius: 5px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    outline: none;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
     background-color: #0c6dfc;
-    color: #FFF;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #095bb8;
 }
